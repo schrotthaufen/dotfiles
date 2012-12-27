@@ -1,0 +1,14 @@
+e anal.depth = 5
+e anal.ptrdepth = 5
+e asm.comments = true
+e asm.xrefs = true
+e asm.functions = true
+e asm.syntax = intel
+e cfg.fortunes = false
+e cfg.editor = vim
+e bin.strings = true
+e graph.font = DeJa Vu Sans Mono
+e scr.pager = less -R
+e scr.color = true 
+;e scr.html = true
+e cmd.graph = !htmlgraph.sh

@@ -1,0 +1,31 @@
+! global settings
+*foreground: #ffffff
+!*background: rgb:11/11/11
+*background: #000000
+
+! xterm settings
+xTerm*font: -*-terminus-medium-*-*-*-17-*-*-*-*-*-*-*
+XTerm*utf8: always
+
+! urxvt settings
+urxvt*borderless: true
+urxvt*scrollBar: false
+urxvt*scrollTtyOutput:  false
+urxvt*scrollTtyKeypress:  true
+urxvt*buffered: false
+urxvt*jumpScroll: true
+urxvt*skipScroll: false
+urxvt*font: -*-terminus-medium-*-*-*-17-*-*-*-*-*-*-*,-*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
+urxvt*boldfont: -*-terminus-bold-*-*-*-17-*-*-*-*-*-*-*,-*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*colorBD: #859900
+urxvt*colorIT: #ff0000
+
+! Xft settings
+Xft.lcdfilter:  lcdlight
+Xft.dpi: 124x125
+!Xft.dpi: 96
+! Xft.antialias: false
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hinstyle: hintslight
+Xft.autohint: false
