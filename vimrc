@@ -1,6 +1,7 @@
 "
 " @file Vim config
 "
+" Some parts if this file are
 " @copyright (c) 2008-2010, Christoph Kappel <unexist@dorfelite.net>
 " @version $Id: .vimrc,v 267 2010/10/28 13:51:45 unexist $
 "
