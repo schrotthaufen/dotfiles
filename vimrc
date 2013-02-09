@@ -67,5 +67,14 @@ endif
 " Match
 match ErrorMsg '\%>72v.\+'
 
-" Usefull mappings
+" forgot sudo? tee has you covered, mate :)
 cmap w!! %!sudo tee > /dev/null %
+
+" requires ctags and the taglist plugin
+" open/close traglist window
+let Tlist_Ctags_Cmd = "/usr/bin/ctags"
+let Tlist_WinWidth = 30
+map <F4> :TlistToggle<cr>
+
+" build taglist for current pwd
+map <F8> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
