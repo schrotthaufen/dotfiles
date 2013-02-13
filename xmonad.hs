@@ -10,6 +10,7 @@ import XMonad.Layout.Reflect
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Util.WindowProperties (getProp32s)
 import Data.Ratio ((%))
+import XMonad.Util.EZConfig -- for additional keybindings
 
 kdeOverride :: Query Bool
 kdeOverride = ask >>= \w -> liftX $ do
@@ -21,13 +22,12 @@ main = xmonad $ ewmh kde4Config
  { modMask = mod4Mask -- use the Windows button as mod
  , terminal = "urxvtc"
 -- , startupHook = setWMName "LG3D" -- fool java
--- , layoutHook = smartBorders $ layoutHook kde4Config
---              <+> onWorkspace "gimp" gimp
  , layoutHook = myLayoutHook
  , manageHook = ((className =? "krunner") >>= return . not --> manageHook kde4Config)
                 <+> myManageHook
                 <+> (kdeOverride --> doFloat)
- }
+ }`additionalKeys`
+   [ ((mod4Mask .|. shiftMask, xK_l), spawn "xlock -mode blank") ]
  where
    myManageHook = composeAll . concat $
      [ [ isFullscreen --> doFullFloat ]--(doF W.focusDown <+> doFullFloat) ]
