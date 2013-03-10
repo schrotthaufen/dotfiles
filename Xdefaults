@@ -15,8 +15,11 @@ urxvt*scrollTtyKeypress:  true
 urxvt*buffered: false
 urxvt*jumpScroll: true
 urxvt*skipScroll: false
-urxvt*font: -*-terminus-medium-*-*-*-17-*-*-*-*-*-*-*,-*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
-urxvt*boldfont: -*-terminus-bold-*-*-*-17-*-*-*-*-*-*-*,-*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*font: -*-terminus-medium-*-*-*-17-*-*-*-*-*-*-*,-*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*boldfont: -*-terminus-bold-*-*-*-17-*-*-*-*-*-*-*,-*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
+urxvt.font: xft:Source Code Pro:regular:pixelsize=15
+urxvt*boldfont: xft:Source Code pro:semibold:pixelsize=15
+urxvt.letterSpace:          -1
 !urxvt*colorBD: #859900
 urxvt*colorIT: #ff0000
 
