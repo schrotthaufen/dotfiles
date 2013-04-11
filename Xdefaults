@@ -4,7 +4,8 @@
 *background: #000000
 
 ! xterm settings
-xTerm*font: -*-terminus-medium-*-*-*-17-*-*-*-*-*-*-*
+!xTerm*font: -*-terminus-medium-*-*-*-17-*-*-*-*-*-*-*
+XTerm*font: -*-meslo lg s dz-medium-*-*-17-*-*-*-*-*-*-*
 XTerm*utf8: always
 
 ! urxvt settings
@@ -17,8 +18,10 @@ urxvt*jumpScroll: true
 urxvt*skipScroll: false
 !urxvt*font: -*-terminus-medium-*-*-*-17-*-*-*-*-*-*-*,-*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
 !urxvt*boldfont: -*-terminus-bold-*-*-*-17-*-*-*-*-*-*-*,-*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
-urxvt.font: xft:Source Code Pro:regular:pixelsize=15
-urxvt*boldfont: xft:Source Code pro:semibold:pixelsize=15
+!urxvt.font: xft:Source Code Pro:regular:pixelsize=15
+!urxvt.boldfont: xft:Source Code pro:semibold:pixelsize=15
+urxvt.font: xft:Meslo LG S DZ:regular:pixelsize=15
+urxvt.boldfont: xft:Meslo LG S DZ:bold:pixelsize=15
 urxvt.letterSpace:          -1
 !urxvt*colorBD: #859900
 urxvt*colorIT: #ff0000

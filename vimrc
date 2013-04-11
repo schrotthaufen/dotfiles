@@ -37,6 +37,8 @@ set noswapfile
 set dy+=lastline
 set dy+=uhex
 set rulerformat=%l/%L(%p%%),%c
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor = "latex"
 
 " inoremap {      {}<Left>
 " inoremap {<CR>  {<CR>}<Esc>O
