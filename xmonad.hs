@@ -27,7 +27,7 @@ main = xmonad $ ewmh kde4Config
                 <+> myManageHook
                 <+> (kdeOverride --> doFloat)
  }`additionalKeys`
-   [ ((mod4Mask .|. shiftMask, xK_l), spawn "xlock -mode blank") ]
+   [ ((mod4Mask .|. shiftMask, xK_l), spawn "slock") ]
  where
    myManageHook = composeAll . concat $
      [ [ isFullscreen --> doFullFloat ]--(doF W.focusDown <+> doFullFloat) ]
@@ -38,11 +38,12 @@ main = xmonad $ ewmh kde4Config
      , [ className   =? c --> doF (W.shift "5") | c <- multimedia ]
      , [ className   =? c --> doF (W.shift "6") | c <- downloads ]
      , [ className   =? c --> doF (W.shift "7") | c <- games ]
-     , [ className   =? c --> doF (W.shift "8") | c <- vm ]
+     , [ className   =? c --> doF (W.shift "8") | c <- rdesktop ]
+     , [ className   =? c --> doF (W.shift "9") | c <- vmcontrol ]
      , [ className   =? c --> doIgnore          | c <- myIgnores ]
      ]
    myIgnores     = ["desktop_window", "kdesktop"] -- just don't care about those ;)
-   myFloats      = ["Plasma", "MPlayer", "mplayer2", "Wine"] -- i'm floating
+   myFloats      = ["Plasma", "MPlayer", "mplayer2", "Wine", "Super Hexagon"] -- i'm floating
    browser       = ["OperaNext", "Chromium", "Firefox"] -- open on desktop 2
    chat          = ["Xchat", "Choqok"] -- open on desktop 3
    mail          = ["Claws-mail"] -- open on desktop 4
@@ -50,7 +51,8 @@ main = xmonad $ ewmh kde4Config
                    ,"Clementine", "Sonata", "Last.fm"]  -- open on desktop 5
    downloads     = ["Ktorrent"]
    games         = ["Steam"]
-   vm            = ["VirtualBox", "rdesktop"] -- open on desktop 8
+   rdesktop      = ["rdesktop"] -- open on desktop 8
+   vmcontrol     = ["Virt-manager"]
 
    myLayoutHook = smartBorders . onWorkspace "Gimp" gimp $ layoutHook kde4Config
    gimp = withIM (0.11) (Role "gimp-toolbox") $
