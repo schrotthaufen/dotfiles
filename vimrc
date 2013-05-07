@@ -38,12 +38,15 @@ set dy+=lastline
 set dy+=uhex
 set rulerformat=%l/%L(%p%%),%c
 set grepprg=grep\ -nH\ $*
+set listchars=trail:-,tab:→-,eol:⏎
 let g:tex_flavor = "latex"
 
 " inoremap {      {}<Left>
 " inoremap {<CR>  {<CR>}<Esc>O
 " inoremap {{     {
 " inoremap {}     {}
+
+au FileType python set list
 
 syntax on
 
