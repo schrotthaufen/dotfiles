@@ -43,7 +43,7 @@ main = xmonad $ ewmh kde4Config
      , [ className   =? c --> doIgnore          | c <- myIgnores ]
      ]
    myIgnores     = ["desktop_window", "kdesktop"] -- just don't care about those ;)
-   myFloats      = ["Plasma", "MPlayer", "mplayer2", "Wine", "Super Hexagon"] -- i'm floating
+   myFloats      = ["Plasma", "MPlayer", "mplayer2", "Wine", "Super Hexagon", "pen and Paper"] -- i'm floating
    browser       = ["OperaNext", "Chromium", "Firefox"] -- open on desktop 2
    chat          = ["Xchat", "Choqok"] -- open on desktop 3
    mail          = ["Claws-mail"] -- open on desktop 4

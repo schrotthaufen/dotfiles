@@ -14,6 +14,7 @@ set ruler
 set showcmd
 set hlsearch
 set nowrap
+set sts=2
 set ts=2
 set bs=2
 set sw=2
@@ -46,7 +47,7 @@ let g:tex_flavor = "latex"
 " inoremap {{     {
 " inoremap {}     {}
 
-au FileType python set list
+au FileType python set list et sts=4 ts=4 sw=4
 
 syntax on
 

@@ -5,7 +5,7 @@
 
 ! xterm settings
 !xTerm*font: -*-terminus-medium-*-*-*-17-*-*-*-*-*-*-*
-XTerm*font: -*-meslo lg s dz-medium-*-*-17-*-*-*-*-*-*-*
+XTerm*font: -*-meslo lg s dz-*-*-*-*-17-*-*-*-*-*-*-*
 XTerm*utf8: always
 
 ! urxvt settings

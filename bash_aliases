@@ -7,3 +7,6 @@ alias wine='LIBGL_DRIVERS_PATH=/usr/lib32/xorg/modules/dri /usr/bin/wine'
 alias gdb='/usr/bin/gdb -q'
 alias rdesktop='/usr/bin/rdesktop -g1280x800 -K'
 alias n='/usr/bin/newsbeuter'
+
+alias vnetdn='sudo virsh domif-setlink wxp 52:54:00:2b:6d:b6 down'
+alias vnetup='sudo virsh domif-setlink wxp 52:54:00:2b:6d:b6 up'
