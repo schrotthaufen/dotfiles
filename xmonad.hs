@@ -21,13 +21,16 @@ kdeOverride = ask >>= \w -> liftX $ do
 main = xmonad $ ewmh kde4Config 
  { modMask = mod4Mask -- use the Windows button as mod
  , terminal = "urxvtc"
+ , handleEventHook    = fullscreenEventHook
 -- , startupHook = setWMName "LG3D" -- fool java
  , layoutHook = myLayoutHook
  , manageHook = ((className =? "krunner") >>= return . not --> manageHook kde4Config)
                 <+> myManageHook
                 <+> (kdeOverride --> doFloat)
  }`additionalKeys`
-   [ ((mod4Mask .|. shiftMask, xK_l), spawn "slock") ]
+   [ ((mod4Mask .|. shiftMask, xK_l), spawn "slock")
+   , ((mod4Mask .|. shiftMask, xK_s), spawn "pwsafe")
+   ]
  where
    myManageHook = composeAll . concat $
      [ [ isFullscreen --> doFullFloat ]--(doF W.focusDown <+> doFullFloat) ]
