@@ -23,7 +23,7 @@ main = xmonad $ ewmh kde4Config
  , terminal = "urxvtc"
  , handleEventHook    = fullscreenEventHook
 -- , startupHook = setWMName "LG3D" -- fool java
- , layoutHook = myLayoutHook
+, layoutHook = myLayoutHook
  , manageHook = ((className =? "krunner") >>= return . not --> manageHook kde4Config)
                 <+> myManageHook
                 <+> (kdeOverride --> doFloat)
@@ -46,14 +46,14 @@ main = xmonad $ ewmh kde4Config
      , [ className   =? c --> doIgnore          | c <- myIgnores ]
      ]
    myIgnores     = ["desktop_window", "kdesktop"] -- just don't care about those ;)
-   myFloats      = ["Plasma", "MPlayer", "mplayer2", "Wine", "Super Hexagon", "pen and Paper"] -- i'm floating
+   myFloats      = ["Plasma", "MPlayer", "mplayer2", "Wine", "Super Hexagon", "pen and Paper", "starbound"] -- i'm floating
    browser       = ["OperaNext", "Chromium", "Firefox"] -- open on desktop 2
    chat          = ["Xchat", "Choqok"] -- open on desktop 3
    mail          = ["Claws-mail"] -- open on desktop 4
    multimedia    = ["MPlayer", "mplayer2", "Mcomix", "Deadbeef"
                    ,"Clementine", "Sonata", "Last.fm"]  -- open on desktop 5
    downloads     = ["Ktorrent"]
-   games         = ["Steam"]
+   games         = ["Steam", "Desura", "starbound"]
    rdesktop      = ["rdesktop"] -- open on desktop 8
    vmcontrol     = ["Virt-manager"]
 
