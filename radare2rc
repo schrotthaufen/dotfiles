@@ -1,6 +1,7 @@
 e anal.depth = 10
 e anal.ptrdepth = 10
 e asm.comments = true
+e asm.lineswidth=20
 e asm.xrefs = true
 e asm.functions = true
 e asm.syntax = intel

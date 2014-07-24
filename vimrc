@@ -13,6 +13,9 @@ set history=50
 set ruler
 set showcmd
 set hlsearch
+set incsearch
+set ignorecase
+set smartcase
 set nowrap
 set sts=2
 set ts=2
@@ -26,6 +29,7 @@ set showmode
 set shortmess=aIT
 set foldmethod=marker
 set encoding=utf-8
+set fileencoding=utf-8
 set autoindent
 set smartindent
 set number
@@ -40,6 +44,7 @@ set dy+=uhex
 set rulerformat=%l/%L(%p%%),%c
 set grepprg=grep\ -nH\ $*
 set listchars=trail:-,tab:→-,eol:⏎
+set ttyfast
 let g:tex_flavor = "latex"
 
 " inoremap {      {}<Left>
@@ -58,11 +63,6 @@ if has("cmdline_info")
   set ruler
   set showcmd
 endif
-
-" Nopaste
-nnoremap <F12> :set invpaste paste?<CR>
-imap <F12> <C-O><F12>
-set pastetoggle=<F12>
 
 " Filetype
 if has("autocmd")
