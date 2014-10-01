@@ -51,7 +51,7 @@ main = xmonad $ ewmh kde4Config
    chat          = ["Xchat", "Choqok"] -- open on desktop 3
    mail          = ["Claws-mail"] -- open on desktop 4
    multimedia    = ["MPlayer", "mplayer2", "Mcomix", "Deadbeef"
-                   ,"Clementine", "Sonata", "Last.fm"]  -- open on desktop 5
+                   ,"Clementine", "Sonata", "Last.fm", "Spotify"]  -- open on desktop 5
    downloads     = ["Ktorrent"]
    games         = ["Steam", "Desura", "starbound"]
    rdesktop      = ["rdesktop"] -- open on desktop 8

@@ -1,6 +1,8 @@
 #Usefull abbreviations
 alias d='/bin/df -h'
 alias la='/bin/ls -laFh --color=auto'
+alias grgattr='getfattr -n user.pax.flags'
+alias grsattr='setfattr -n user.pax.flags -v' # <exempt> <binary>
 
 alias cal='LC_ALL="de_DE.UTF-8" /usr/bin/cal'
 alias wine='LIBGL_DRIVERS_PATH=/usr/lib32/xorg/modules/dri /usr/bin/wine'

@@ -12,5 +12,7 @@ export HISTCONTROL=ignoredups
 export HISTIGNORE="df*:free*"
 export PROMPT_COMMAND="history -a" #; ${PROMPT_COMMAND}"
 unset G_BROKEN_FILENAMES
+unset LD_PRELOAD
+unset LD_LIBRARY_PATH
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
