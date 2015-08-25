@@ -7,12 +7,18 @@ export LANG="en_US.UTF-8"
 export PATH="${PATH}:${HOME}/projects/shell-scripts/run"
 export LESS="-iJ"
 export GTK2_RC_FILES="${HOME}/.kde4/share/config/gtkrc"
-export HISTSIZE="10000"
+export HISTSIZE="25000"
 export HISTCONTROL=ignoredups
-export HISTIGNORE="df*:free*"
-export PROMPT_COMMAND="history -a" #; ${PROMPT_COMMAND}"
+#export PROMPT_COMMAND="history -n; history -w; history -c; history -r" #; ${PROMPT_COMMAND}"
+export _JAVA_AWT_WM_NONREPARENTING=1
 unset G_BROKEN_FILENAMES
 unset LD_PRELOAD
 unset LD_LIBRARY_PATH
+
+complete -cf sudo
+complete -cf torify
+complete -cf man
+complete -cf apropos
+complete -cf proxychains
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc

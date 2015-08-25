@@ -45,7 +45,7 @@ set rulerformat=%l/%L(%p%%),%c
 set grepprg=grep\ -nH\ $*
 set listchars=trail:-,tab:→-,eol:⏎
 set ttyfast
-let g:tex_flavor = "latex"
+let g:tex_flavor = "lualatex"
 
 " inoremap {      {}<Left>
 " inoremap {<CR>  {<CR>}<Esc>O
@@ -53,11 +53,16 @@ let g:tex_flavor = "latex"
 " inoremap {}     {}
 
 au FileType python set list et sts=4 ts=4 sw=4
+au FileType tex set list et sts=4 ts=4 sw=4
 
 syntax on
 
-colorscheme darkdevel
-
+"colorscheme darkdevel
+set t_Co=256
+let &t_AB="\e[48;5;%dm"
+let &t_AF="\e[38;5;%dm"
+colorscheme kalisi
+set background=dark
 " Commandline
 if has("cmdline_info")
   set ruler

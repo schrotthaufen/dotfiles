@@ -5,15 +5,15 @@
 
 ! xterm settings
 !xTerm*font: -*-terminus-medium-*-*-*-17-*-*-*-*-*-*-*
-XTerm*font: -*-meslo lg s dz-*-*-*-*-17-*-*-*-*-*-*-*
+XTerm*font: -*-meslo lg s dz-*-*-*-*-15-*-*-*-*-*-*-*
 XTerm*utf8: always
 
 ! urxvt settings
 urxvt*borderless: true
 urxvt*scrollBar: false
-urxvt*scrollTtyOutput:  false
+urxvt*scrollTtyOutput:  true
 urxvt*scrollTtyKeypress:  true
-urxvt*buffered: false
+urxvt*buffered: true
 urxvt*jumpScroll: true
 urxvt*skipScroll: false
 !urxvt*font: -*-terminus-medium-*-*-*-17-*-*-*-*-*-*-*,-*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
@@ -22,6 +22,8 @@ urxvt*skipScroll: false
 !urxvt.boldfont: xft:Source Code pro:semibold:pixelsize=15
 urxvt.font: xft:Meslo LG S DZ:regular:pixelsize=15
 urxvt.boldfont: xft:Meslo LG S DZ:bold:pixelsize=15
+!urxvt.font: -*-yancfontdz-*-*-*-*-14-*-*-*-*-*-*-*
+!urxvt.boldfont: -*-yancfontdz-bold-*-*-*-14-*-*-*-*-*-*-*
 urxvt.letterSpace:          -1
 !urxvt*colorBD: #859900
 urxvt*colorIT: #ff0000
@@ -30,8 +32,7 @@ urxvt*colorIT: #ff0000
 Xft.lcdfilter:  lcdlight
 Xft.dpi: 124x125
 !Xft.dpi: 96
-! Xft.antialias: false
+Xft.antialias: true
 Xft.rgba: rgb
 Xft.hinting: true
 Xft.hinstyle: hintslight
-Xft.autohint: false

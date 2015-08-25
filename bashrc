@@ -11,11 +11,6 @@ if [ -f ~/.bash_aliases ]; then
 	source ~/.bash_aliases
 fi
 
-# enable completion for sudo
-complete -cf sudo
-complete -cf torify
-complete -cf man
-complete -cf apropos
 
 # don't start tmux if we aren't interactive
 if [[ ${-} == *i* ]]; then
