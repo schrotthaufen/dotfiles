@@ -24,6 +24,10 @@ main = xmonad $ ewmh defaultConfig
 		, ((mod4Mask .|. shiftMask, xK_s), spawn "/usr/bin/pwsafe")
 		, ((mod4Mask .|. shiftMask, xK_m), spawn "/usr/bin/claws-mail")
 		, ((mod4Mask, xK_p), spawn "/usr/bin/dmenu_run")
+		-- get these with xev
+		, ((0, 0x1008ff13), spawn "amixer -D pulse sset Master 2%+")
+		, ((0, 0x1008ff11), spawn "amixer -D pulse sset Master 2%-")
+		, ((0, 0x1008ff12), spawn "amixer -D pulse set Master 1+ toggle")
 		]
 	where
 		myManageHook = composeAll . concat $
