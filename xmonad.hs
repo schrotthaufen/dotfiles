@@ -14,7 +14,8 @@ import Control.Monad
 import XMonad.Util.EZConfig -- for additional keybindings
 
 main = xmonad $ ewmh defaultConfig 
-	{ modMask = mod4Mask -- use the Windows button as mod
+	{ layoutHook = smartBorders $ layoutHook defaultConfig
+		, modMask = mod4Mask -- use the Windows button as mod
 		, terminal = "/usr/bin/urxvtc"
 		, handleEventHook = fullscreenEventHook <+> removeBordersEventHook
 		, startupHook = myStartupHook
