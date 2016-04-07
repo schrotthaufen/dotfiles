@@ -1,6 +1,6 @@
 #Usefull abbreviations
 alias d='/bin/df -h'
-alias la='/bin/ls -laFh --color=auto'
+alias la='/bin/ls -laFhN --color=auto'
 alias grgattr='/usr/bin/sudo /usr/bin/getfattr -n user.pax.flags'
 alias grsattr='/usr/bin/sudo /usr/bin/setfattr -n user.pax.flags -v' # <exempt> <binary>
 
