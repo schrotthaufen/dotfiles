@@ -2,6 +2,7 @@ e anal.nopskip = false
 e anal.eobjmp = true
 e anal.hasnext = true
 e anal.afterjmp = true
+e anal.jmptbl = true
 e asm.lineswidth=20
 e asm.middle = true
 e cfg.fortunes = false
