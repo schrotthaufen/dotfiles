@@ -15,6 +15,8 @@ unset LD_PRELOAD
 unset LD_LIBRARY_PATH
 export NMAP_PRIVILEGED=1
 
+[[ -f ~/.dircolors ]] && eval $(dircolors ~/.dircolors)
+
 complete -cf sudo
 complete -cf torify
 complete -cf man
