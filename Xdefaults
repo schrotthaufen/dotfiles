@@ -4,7 +4,6 @@
 *background: #000000
 
 ! xterm settings
-!xTerm*font: -*-terminus-medium-*-*-*-17-*-*-*-*-*-*-*
 XTerm*font: -*-meslo lg s dz-*-*-*-*-15-*-*-*-*-*-*-*
 XTerm*utf8: always
 
@@ -16,22 +15,17 @@ urxvt*scrollTtyKeypress:  true
 urxvt*buffered: true
 urxvt*jumpScroll: true
 urxvt*skipScroll: false
-!urxvt*font: -*-terminus-medium-*-*-*-17-*-*-*-*-*-*-*,-*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
-!urxvt*boldfont: -*-terminus-bold-*-*-*-17-*-*-*-*-*-*-*,-*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
-!urxvt.font: xft:Source Code Pro:regular:pixelsize=15
-!urxvt.boldfont: xft:Source Code pro:semibold:pixelsize=15
-urxvt.font: xft:Meslo LG S DZ:regular:pixelsize=15
-urxvt.boldfont: xft:Meslo LG S DZ:bold:pixelsize=15
-!urxvt.font: -*-yancfontdz-*-*-*-*-14-*-*-*-*-*-*-*
-!urxvt.boldfont: -*-yancfontdz-bold-*-*-*-14-*-*-*-*-*-*-*
-urxvt.letterSpace:          -1
-!urxvt*colorBD: #859900
+urxvt.font: xft:Meslo LG S DZ:regular:pixelsize=16,\
+            xft:Symbola:size=12
+urxvt.boldfont: xft:Meslo LG S DZ:bold:pixelsize=16
+urxvt.letterSpace: -1
 urxvt*colorIT: #ff0000
+#include "/home/schrotthaufen/.selenized/urxvt/selenized-black.xdefaults"
 
 ! Xft settings
 Xft.lcdfilter:  lcdlight
-Xft.dpi: 124x125
-!Xft.dpi: 96
+!Xft.dpi: 124x125
+Xft.dpi: 94
 Xft.antialias: true
 Xft.rgba: rgb
 Xft.hinting: true

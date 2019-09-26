@@ -11,12 +11,13 @@ if [ -f ~/.bash_aliases ]; then
 	source ~/.bash_aliases
 fi
 
-
-# don't start tmux if we aren't interactive
+# only start tmux if we are interactive, and on a pseudo terminal
 if [[ ${-} == *i* ]]; then
-	# don't nest tmux
-	if [[ ${TERM} != screen* ]]; then
-		tmux -2 -u attach || tmux -u -2 && exit $?
-#		exit $?
+	if [[ $(tty) == *pts* ]]; then
+		# don't nest tmux
+		if [[ ${TERM} != screen* ]]; then
+			tmux -2 -u attach || tmux -u -2 && exit $?
+#			exit $?
+		fi
 	fi
 fi

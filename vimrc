@@ -45,13 +45,16 @@ set rulerformat=%l/%L(%p%%),%c
 set grepprg=grep\ -nH\ $*
 set listchars=trail:-,tab:→-,eol:⏎
 set ttyfast
+set nomodeline
 let g:tex_flavor = "lualatex"
+let g:rainbow_active = 1
 
 " inoremap {      {}<Left>
 " inoremap {<CR>  {<CR>}<Esc>O
 " inoremap {{     {
 " inoremap {}     {}
 
+set list
 au FileType python set list et sts=4 ts=4 sw=4
 au FileType tex set list et sts=4 ts=4 sw=4
 

@@ -3,7 +3,7 @@ e anal.eobjmp = true
 e anal.hasnext = true
 e anal.afterjmp = true
 e anal.jmptbl = true
-e asm.lineswidth=20
+e asm.lines.width=20
 e asm.middle = true
 e cfg.fortunes = false
 e cfg.editor = vim
@@ -32,4 +32,3 @@ ec other rgb:bbb
 ec num rgb:f03
 ec reg rgb:6f0
 ec fline rgb:fc0
-ec flow rgb:0f0

@@ -4,7 +4,7 @@ umask 077
 export EDITOR="vim"
 export LC_COLLATE="C"
 export LANG="en_US.UTF-8"
-export PATH="${PATH}:${HOME}/projects/shell-scripts/run"
+export PATH="${PATH}:${HOME}/projects/shell-scripts/run:${HOME}/node_modules/h265ize"
 export LESS="-iJR"
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export HISTSIZE="25000"

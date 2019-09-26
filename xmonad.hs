@@ -21,13 +21,15 @@ main = xmonad $ ewmh defaultConfig
 		, startupHook = myStartupHook
 		, manageHook = myManageHook
 	} `additionalKeys`
-		[ ((mod4Mask .|. shiftMask, xK_l), spawn "/usr/bin/slock")
+		[ ((mod4Mask .|. shiftMask, xK_l), spawn "/usr/bin/i3lock -c 54626F")
 		, ((mod4Mask .|. shiftMask, xK_s), spawn "/usr/bin/pwsafe")
 		, ((mod4Mask .|. shiftMask, xK_m), spawn "/usr/bin/claws-mail")
-		, ((mod4Mask, xK_p), spawn "/usr/bin/dmenu_run")
-		-- get these with xev
-		, ((0, 0x1008ff13), spawn "amixer -D pulse sset Master 2%+")
-		, ((0, 0x1008ff11), spawn "amixer -D pulse sset Master 2%-")
+		, ((mod4Mask .|. shiftMask, xK_i), spawn "/usr/bin/urxvtc -e weechat")
+		, ((mod4Mask .|. shiftMask, xK_g), spawn "/usr/bin/chromium --incognito")
+		, ((mod4Mask .|. shiftMask, xK_b), spawn "/usr/bin/firefox")
+		, ((mod4Mask, xK_p), spawn "/usr/bin/dmenu_run -fn 'Meslo LG S DZ:regular:pixelsize=16'")
+		, ((0, 0x1008ff13), spawn "amixer -D pulse sset Master 5%+")
+		, ((0, 0x1008ff11), spawn "amixer -D pulse sset Master 5%-")
 		, ((0, 0x1008ff12), spawn "amixer -D pulse set Master 1+ toggle")
 		]
 	where
@@ -43,13 +45,13 @@ main = xmonad $ ewmh defaultConfig
 			, [ className   =? c --> doF (W.shift "8") | c <- rdesktop ]
 			, [ className   =? c --> doF (W.shift "9") | c <- vmcontrol ]
 			]
-		myFloats      = ["Plasma", "Wine", "Super Hexagon", "mpv", "TIS-100"] -- i'm floating
-		browser       = ["chromium", "Firefox", "Tor Browser"] -- open on desktop 2
-		chat          = ["Xchat", "Skype"] -- open on desktop 3
+		myFloats      = ["mpv", "Tor Browser"] -- i'm floating
+		browser       = ["Chromium", "chromium", "Firefox", "Tor Browser", "Google-chrome"] -- open on desktop 2
+		chat          = ["Skype"] -- open on desktop 3
 		mail          = ["Claws-mail"] -- open on desktop 4
-		multimedia    = ["MComix", "mpv", "Clementine", "Sonata", "Spotify"]  -- open on desktop 5
-		downloads     = ["Ktorrent"]
-		games         = ["Steam", "Desura"]
+		multimedia    = ["MComix", "mpv", "Spotify"]  -- open on desktop 5
+		downloads     = ["Deluge"]
+		games         = ["Steam"]
 		rdesktop      = ["rdesktop"] -- open on desktop 8
 		vmcontrol     = ["Virt-manager"]
 
