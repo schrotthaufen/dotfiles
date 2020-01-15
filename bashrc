@@ -5,6 +5,13 @@ else
 	export PS1='[\u@\h \W]\$ '
 fi
 
+# fzf completion & key-bindings
+if [ -f /usr/share/fzf/key-bindings.bash ]; then
+	source /usr/share/fzf/key-bindings.bash
+fi
+if [ -f /usr/share/fzf/completion.bash ]; then
+	source /usr/share/fzf/completion.bash
+fi
 
 # include aliases
 if [ -f ~/.bash_aliases ]; then
