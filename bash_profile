@@ -17,10 +17,4 @@ export NMAP_PRIVILEGED=1
 
 [[ -f ~/.dircolors ]] && eval $(dircolors ~/.dircolors)
 
-complete -cf sudo
-complete -cf torify
-complete -cf man
-complete -cf apropos
-complete -cf proxychains
-
 [[ -f ~/.bashrc ]] && . ~/.bashrc
