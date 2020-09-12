@@ -1,0 +1,8 @@
+configuration {
+	width: 30;
+	font: "Meslo LG S DZ 16";
+	click-to-exit: false;
+	sort: true;
+	sorting-method: "fzf";
+	theme: "theme";
+}

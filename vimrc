@@ -57,6 +57,7 @@ let g:rainbow_active = 1
 set list
 au FileType python set list et sts=4 ts=4 sw=4
 au FileType tex set list et sts=4 ts=4 sw=4
+au BufNewFile,BufRead /*.rasi setf css
 
 syntax on
 
