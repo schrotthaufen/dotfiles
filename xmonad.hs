@@ -9,7 +9,6 @@ import XMonad.Layout.Reflect
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Util.WindowProperties (getProp32s)
 import XMonad.Util.Run
-import XMonad.Util.SpawnOnce
 import Data.Ratio ((%))
 import Data.Monoid
 import Control.Monad
@@ -59,7 +58,6 @@ main = xmonad $ ewmh defaultConfig
 
     myStartupHook = do
       setWMName "LG3D" -- fool java
-      spawnOnce "/home/schrotthaufen/.xmonad/startup.sh"
 
     -- from http://funktionaali.com/posts/2014-07-01-How%20to%20get%20XMonad%20play%20well%20with%20fullscreen%20mpv.html
     -- | Remove borders from every mpv window as soon as possible in an event
