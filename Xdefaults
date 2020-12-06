@@ -20,7 +20,7 @@ urxvt.font: xft:Meslo LG S DZ:regular:pixelsize=16,\
 urxvt.boldfont: xft:Meslo LG S DZ:bold:pixelsize=16
 urxvt.letterSpace: -1
 urxvt*colorIT: #ff0000
-#include "/home/schrotthaufen/.selenized/urxvt/selenized-black.xdefaults"
+#include ".selenized/terminals/urxvt/selenized-black.xdefaults"
 
 ! Xft settings
 Xft.lcdfilter:  lcdlight
