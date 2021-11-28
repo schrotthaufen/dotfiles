@@ -61,11 +61,11 @@ au BufNewFile,BufRead /*.rasi setf css
 
 syntax on
 
-"colorscheme darkdevel
 set t_Co=256
 let &t_AB="\e[48;5;%dm"
 let &t_AF="\e[38;5;%dm"
-colorscheme kalisi
+"colorscheme kalisi
+colorscheme selenized
 set background=dark
 " Commandline
 if has("cmdline_info")
