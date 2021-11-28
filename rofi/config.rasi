@@ -4,5 +4,6 @@ configuration {
 	click-to-exit: false;
 	sort: true;
 	sorting-method: "fzf";
-	theme: "theme";
 }
+
+@theme "theme"
