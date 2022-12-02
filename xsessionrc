@@ -1,7 +1,6 @@
 #!/bin/sh
 xautolock -secure -time 2 -locker "i3lock -c 54626F" &
 xsetroot -cursor_name left_ptr &
-pgrep urxvtd || urxvtd -q -o -f &
 /usr/bin/qiv -t -y ~/pics/totoro.jpg &
 /usr/bin/claws-mail &
 setxkbmap -layout us   \

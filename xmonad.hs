@@ -14,24 +14,23 @@ import Data.Monoid
 import Control.Monad
 import XMonad.Util.EZConfig -- for additional keybindings
 
-main = xmonad $ ewmh def
+main = xmonad $ ewmhFullscreen $ ewmh def
   { layoutHook = smartBorders $ layoutHook def
     , modMask = mod4Mask -- use the Windows button as mod
-    , terminal = "/usr/bin/urxvtc"
-    , handleEventHook = fullscreenEventHook <+> removeBordersEventHook
+    , terminal = "alacritty"
     , startupHook = myStartupHook
     , manageHook = myManageHook
   } `additionalKeys`
-    [ ((mod4Mask .|. shiftMask, xK_l), safeSpawn "/usr/bin/i3lock" ["-c", "54626F"])
-    , ((mod4Mask .|. shiftMask, xK_s), safeSpawnProg "/usr/bin/pwsafe")
-    , ((mod4Mask .|. shiftMask, xK_m), safeSpawnProg "/usr/bin/claws-mail")
-    , ((mod4Mask .|. shiftMask, xK_i), safeSpawn "/usr/bin/urxvtc"  ["-e", "weechat"])
-    , ((mod4Mask .|. shiftMask, xK_g), safeSpawn "/usr/bin/chromium" ["--incognito"])
-    , ((mod4Mask .|. shiftMask, xK_b), safeSpawnProg "/usr/bin/firefox")
+    [ ((mod4Mask .|. shiftMask, xK_l), safeSpawn "i3lock" ["-c", "54626F"])
+    , ((mod4Mask .|. shiftMask, xK_s), safeSpawnProg "pwsafe")
+    , ((mod4Mask .|. shiftMask, xK_m), safeSpawnProg "claws-mail")
+    , ((mod4Mask .|. shiftMask, xK_i), safeSpawn "alacritty"  ["-e", "weechat"])
+    , ((mod4Mask .|. shiftMask, xK_g), safeSpawn "chromium" ["--incognito"])
+    , ((mod4Mask .|. shiftMask, xK_b), safeSpawnProg "firefox")
     , ((mod4Mask, xK_p), safeSpawn "rofi" ["-show", "run"])
-    , ((0, 0x1008ff13), safeSpawn "/usr/bin/amixer" ["-D", "pulse", "sset", "Master", "5%+"])
-    , ((0, 0x1008ff11), safeSpawn "/usr/bin/amixer" ["-D", "pulse", "sset", "Master", "5%-"])
-    , ((0, 0x1008ff12), safeSpawn "/usr/bin/amixer" ["-D", "pulse", "set", "Master", "1+", "toggle"])
+    , ((0, 0x1008ff13), safeSpawn "amixer" ["-D", "pulse", "sset", "Master", "3%+"])
+    , ((0, 0x1008ff11), safeSpawn "amixer" ["-D", "pulse", "sset", "Master", "3%-"])
+    , ((0, 0x1008ff12), safeSpawn "amixer" ["-D", "pulse", "set", "Master", "1+", "toggle"])
     ]
   where
     myManageHook = composeAll . concat $
