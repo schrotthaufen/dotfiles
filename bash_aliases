@@ -7,7 +7,7 @@ alias n='/usr/bin/newsboat'
 #alias fuck='/usr/bin/sudo `history -p "!!"`'
 alias excuse='echo | /usr/bin/nc towel.blinkenlights.nl 666'
 alias decide='/bin/ls -A | /bin/head -n $(($RANDOM % $(/bin/ls -A | /bin/wc -l))) | /bin/tail -1'
-alias up='aur sync -u -c -d custom --makepkg-conf /etc/makepkg.conf && sudo pacman -Syu && sudo pacdiff && sudo find /var/cache/pacman/ -name \*.pkg.tar\* -type f -delete && sudo localepurge'
+alias up='aur sync -u -c -d custom --makepkg-conf /etc/makepkg.conf && sudo pacman -Syu && sudo pacdiff && sudo find /var/cache/pacman/ -name \*.pkg.tar\* -type f -delete && sudo localepurge && xmonad --recompile'
 alias dig='/usr/bin/drill'
 alias mount.ios='ifuse --documents $(ideviceinstaller -l | fzf | cut -d , -f1)'
 
