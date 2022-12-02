@@ -13,7 +13,7 @@ if [[ ${-} == *i* ]]; then
 	if [[ $(tty) == *pts* ]]; then
 		# don't nest tmux
 		if [[ ${TERM} != screen* ]]; then
-			tmux -2 -u attach || tmux -u -2 && exit $?
+			tmux -2 -u attach || tmux -u -2; exit $?
 #			exit $?
 		fi
 	fi
