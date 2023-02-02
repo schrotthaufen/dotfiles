@@ -33,4 +33,15 @@ if [ -f /usr/share/fzf/completion.bash ]; then
 	source /usr/share/fzf/completion.bash
 fi
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+if [[ -z "$ZELLIJ" ]]; then
+	[[ -f ~/.bashrc ]] && . ~/.bashrc
+	if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
+		zellij attach -c
+	else
+		zellij
+	fi
+
+	if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
+		exit
+	fi
+fi

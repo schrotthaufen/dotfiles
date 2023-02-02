@@ -1,5 +1,6 @@
 unset LD_PRELOAD
 unset LD_LIBRARY_PATH
+FOO=bar
 
 # color shell prompt red if connected via ssh
 if [ -n "${SSH_CLIENT+x}" ]; then
@@ -9,12 +10,15 @@ else
 fi
 
 # only start tmux if we are interactive, and on a pseudo terminal
-if [[ ${-} == *i* ]]; then
-	if [[ $(tty) == *pts* ]]; then
-		# don't nest tmux
-		if [[ ${TERM} != screen* ]]; then
-			tmux -2 -u attach || tmux -u -2; exit $?
-#			exit $?
-		fi
-	fi
+#if [[ ${-} == *i* ]]; then
+#	if [[ $(tty) == *pts* ]]; then
+#		# don't nest tmux
+#		if [[ ${TERM} != screen* ]]; then
+#			tmux -2 -u attach || tmux -u -2; exit $?
+##			exit $?
+#		fi
+#	fi
+#fi
+if [[ ! -z "${ZELLIJ}" ]]; then
+	[[ -f ~/.bash_profile ]] && . ~/.bash_profile
 fi
