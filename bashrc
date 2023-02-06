@@ -1,6 +1,5 @@
 unset LD_PRELOAD
 unset LD_LIBRARY_PATH
-FOO=bar
 
 # color shell prompt red if connected via ssh
 if [ -n "${SSH_CLIENT+x}" ]; then

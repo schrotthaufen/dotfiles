@@ -17,6 +17,8 @@ export HISTCONTROL=ignoredups
 export _JAVA_AWT_WM_NONREPARENTING=1
 unset G_BROKEN_FILENAMES
 export NMAP_PRIVILEGED=1
+export ZELLIJ_AUTO_EXIT=true
+export ZELLIJ_AUTO_ATTACH=true
 
 [[ -f ~/.dircolors ]] && eval $(dircolors ~/.dircolors)
 
