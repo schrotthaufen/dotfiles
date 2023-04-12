@@ -1,14 +1,8 @@
 shopt -s histappend
 shopt -s dotglob
 umask 077
+unset LC_ALL
 export EDITOR="vim"
-export LC_COLLATE="en_US.UTF-8"
-#export LC_COLLATE="C"
-export LC_MESSAGES="C.UTF-8"
-export LANG="en_US.UTF-8"
-export LANGUAGE="en_US.UTF-8"
-export LC_ALL="en_US.UTF-8"
-export LC_TIME="de_DE.UTF-8"
 export PATH="${PATH}:${HOME}/projects/shell-scripts/run:${HOME}/node_modules/h265ize"
 export LESS="-iJR"
 export QT_QPA_PLATFORMTHEME="qt5ct"
