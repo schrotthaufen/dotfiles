@@ -1,0 +1,8 @@
+font=Atkinson Hyperlegible 16
+#background-color=
+#border-color=
+#icons=1
+default-timeout=5000
+max-history=0
+group-by=app-name
+layer=overlay

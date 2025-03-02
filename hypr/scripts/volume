@@ -1,0 +1,26 @@
+#!/bin/sh
+
+get_vol() {
+	wpctl get-volume @DEFAULT_AUDIO_SINK@
+}
+notify() {
+	volume="$(get_vol | cut -d ' ' -f2)"
+	volume=$(echo "( $volume * 100 ) / 1" | bc)
+	notify-send -t 500 -h "int:value:$volume" -a 'wp-vol' -u low "Volume: ${volume}%"
+}
+
+inc_vol() {
+	wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+
+	notify
+}
+
+dec_vol() {
+	wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+	notify
+}
+
+case "$1" in
+	"inc") inc_vol;;
+	"dec") dec_vol;;
+	*) ;;
+esac
